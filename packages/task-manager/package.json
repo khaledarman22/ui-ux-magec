@@ -1,0 +1,20 @@
+{
+  "name": "@ui-ux-magec/task-manager",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Persistent task store, state machine, dependency scheduler and scope locks.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/workspace": "0.1.0",
+    "@ui-ux-magec/logger": "0.1.0"
+  }
+}

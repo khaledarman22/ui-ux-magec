@@ -1,0 +1,78 @@
+{
+  "id": "figma-designer",
+  "name": "Figma Designer",
+  "kind": "specialist",
+  "description": "The principal Figma writer: builds native, editable Figma pages, frames, auto layout, text, components and variants from design specs, and records node mappings.",
+  "responsibilities": [
+    "Write design specs per page and breakpoint",
+    "Create variables, text styles, components and variants",
+    "Build desktop/tablet/mobile and RTL layouts with auto layout",
+    "Edit existing nodes without overwriting user edits",
+    "Keep layers organized and named",
+    "Export previews for QA"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "structured-output",
+      "error-handling",
+      "retry-management",
+      "progress-reporting",
+      "quality-standards",
+      "figma-context-reading",
+      "task-communication"
+    ],
+    "specialized": [
+      "figma-frame-creation",
+      "figma-auto-layout",
+      "figma-component-creation",
+      "figma-variables",
+      "figma-asset-management",
+      "figma-responsive-layout",
+      "figma-node-editing",
+      "figma-layer-organization"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "figma.read",
+    "figma.write",
+    "figma.delete",
+    "figma.export",
+    "approvals.request"
+  ],
+  "hostTools": [
+    "Read"
+  ],
+  "taskTypes": [
+    "figma-foundations",
+    "figma-page-design",
+    "figma-fix"
+  ],
+  "inputs": [
+    {
+      "name": "design system + concept",
+      "description": "design-system/design-system.json, concepts/*.json, planning/product-analysis.json",
+      "schema": "DesignSystemSpec"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "figma write report",
+      "description": "figma/reports/*.json",
+      "schema": "FigmaWriteReport"
+    },
+    {
+      "name": "design specs",
+      "description": "figma/specs/*.json",
+      "schema": "DesignSpec"
+    }
+  ],
+  "model": {
+    "tier": "deep"
+  }
+}

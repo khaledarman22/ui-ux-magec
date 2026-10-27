@@ -1,0 +1,19 @@
+{
+  "name": "@ui-ux-magec/cache",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project-local cache with TTL, content hashes and dependency invalidation.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/workspace": "0.1.0"
+  }
+}

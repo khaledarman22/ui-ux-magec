@@ -1,0 +1,75 @@
+{
+  "id": "research-agent",
+  "name": "Research Agent",
+  "kind": "specialist",
+  "description": "Finds real, verifiable UI/UX references per feature across multiple sources, deduplicates and ranks them, and reports provenance.",
+  "responsibilities": [
+    "Plan feature-specific queries with varied style angles",
+    "Search permitted sources (search API or host browser)",
+    "Verify candidates by retrieval; never fabricate results",
+    "Deduplicate, rank with diversity, record provenance",
+    "Write structured research reports"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "source-validation",
+      "structured-output",
+      "error-handling",
+      "retry-management",
+      "progress-reporting",
+      "task-communication",
+      "tool-selection"
+    ],
+    "specialized": [
+      "reference-discovery",
+      "competitor-research",
+      "visual-research",
+      "reference-evaluation",
+      "source-deduplication",
+      "design-trend-analysis"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "research.network",
+    "references.write",
+    "assets.write"
+  ],
+  "hostTools": [
+    "WebSearch",
+    "WebFetch",
+    "Read"
+  ],
+  "taskTypes": [
+    "research-plan",
+    "research"
+  ],
+  "inputs": [
+    {
+      "name": "product analysis",
+      "description": "planning/product-analysis.json",
+      "schema": "ProductAnalysis"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "research plan",
+      "description": "research/plan-<scope>.json",
+      "schema": "ResearchPlan"
+    },
+    {
+      "name": "research report",
+      "description": "research/report-<category>.json",
+      "schema": "ResearchReport"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

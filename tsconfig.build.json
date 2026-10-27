@@ -1,0 +1,56 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/schemas"
+    },
+    {
+      "path": "packages/logger"
+    },
+    {
+      "path": "packages/workspace"
+    },
+    {
+      "path": "packages/cache"
+    },
+    {
+      "path": "packages/memory"
+    },
+    {
+      "path": "packages/task-manager"
+    },
+    {
+      "path": "packages/skill-registry"
+    },
+    {
+      "path": "packages/agent-core"
+    },
+    {
+      "path": "packages/research"
+    },
+    {
+      "path": "packages/reference-intelligence"
+    },
+    {
+      "path": "packages/design-engine"
+    },
+    {
+      "path": "packages/figma-bridge"
+    },
+    {
+      "path": "packages/quality-assurance"
+    },
+    {
+      "path": "packages/orchestration"
+    },
+    {
+      "path": "integrations"
+    },
+    {
+      "path": "apps/runtime"
+    },
+    {
+      "path": "apps/cli"
+    }
+  ]
+}

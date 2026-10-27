@@ -1,0 +1,83 @@
+{
+  "id": "master-orchestrator",
+  "name": "Master Orchestrator",
+  "kind": "orchestrator",
+  "description": "Primary interface: understands requests, plans and dispatches work to specialists, monitors progress, routes feedback, handles approvals and reports results.",
+  "responsibilities": [
+    "Detect new vs existing project and initialize or load the workspace",
+    "Decompose requests into dependency-aware task graphs",
+    "Dispatch tasks to the right specialist and monitor them",
+    "Handle failures, retries and revisions without contradicting earlier decisions",
+    "Request user approval only when a decision is the user's to make",
+    "Translate natural-language feedback into scoped tasks",
+    "Coordinate Figma writes (one writer per scope)",
+    "Produce the final project summary"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "task-communication",
+      "tool-selection",
+      "error-handling",
+      "retry-management",
+      "progress-reporting",
+      "structured-output",
+      "checkpoint-management",
+      "user-feedback-processing",
+      "dependency-management",
+      "quality-standards",
+      "figma-context-reading"
+    ],
+    "specialized": [
+      "request-triage",
+      "workflow-planning",
+      "agent-dispatch",
+      "feedback-routing",
+      "approval-handling",
+      "final-reporting"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "tasks.manage",
+    "approvals.request",
+    "figma.read"
+  ],
+  "hostTools": [
+    "Read",
+    "Glob"
+  ],
+  "taskTypes": [
+    "approval",
+    "concept-approval",
+    "feedback-interpretation",
+    "project-summary"
+  ],
+  "inputs": [
+    {
+      "name": "user request",
+      "description": "Natural-language brief or feedback, in English or Arabic"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "task graph",
+      "description": "tasks/tasks.json",
+      "schema": "Task"
+    },
+    {
+      "name": "summary",
+      "description": "reports/summary.json",
+      "schema": "ProjectSummary"
+    }
+  ],
+  "model": {
+    "tier": "deep"
+  }
+}

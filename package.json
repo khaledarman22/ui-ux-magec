@@ -1,0 +1,40 @@
+{
+  "name": "ui-ux-magec",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first autonomous multi-agent UI/UX research, planning and Figma design system.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "integrations"
+  ],
+  "bin": {
+    "ui-ux-magec": "apps/cli/bin/ui-ux-magec.js"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json && npm run build -w @ui-ux-magec/figma-plugin",
+    "typecheck": "tsc -b tsconfig.build.json && tsc -p tests/tsconfig.json",
+    "clean": "node scripts/clean.mjs",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "vitest run tests/e2e",
+    "test:live-figma": "MAGEC_LIVE_FIGMA=1 vitest run tests/e2e/figma-live.test.ts",
+    "setup": "node scripts/setup.mjs",
+    "magec": "node apps/cli/bin/ui-ux-magec.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/ws": "^8.18.2",
+    "typescript": "~5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

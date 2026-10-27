@@ -1,0 +1,68 @@
+{
+  "id": "visual-analysis-agent",
+  "name": "Visual Analysis Agent",
+  "kind": "specialist",
+  "description": "Inspects reference images and pages to extract layout, hierarchy, typography, color, spacing, components and UX strengths/weaknesses.",
+  "responsibilities": [
+    "Inspect previews or live pages before analysing",
+    "Extract structural and visual characteristics",
+    "Distinguish visual appeal from usability",
+    "Flag accessibility concerns",
+    "Synthesize cross-reference patterns"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "source-validation",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards"
+    ],
+    "specialized": [
+      "visual-composition-analysis",
+      "typography-analysis",
+      "layout-analysis",
+      "color-analysis",
+      "ux-pattern-analysis"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "research.network",
+    "references.write",
+    "assets.write"
+  ],
+  "hostTools": [
+    "Read",
+    "WebFetch"
+  ],
+  "taskTypes": [
+    "visual-analysis"
+  ],
+  "inputs": [
+    {
+      "name": "references",
+      "description": "references/references.json (verified, with previews)",
+      "schema": "Reference"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "analyses",
+      "description": "references/analyses/*.json",
+      "schema": "ReferenceAnalysis"
+    },
+    {
+      "name": "visual analysis report",
+      "description": "research/visual-analysis-<category>.json",
+      "schema": "VisualAnalysisReport"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

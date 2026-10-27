@@ -1,0 +1,64 @@
+{
+  "id": "workspace-manager",
+  "name": "Workspace Manager",
+  "kind": "specialist",
+  "description": "Keeps the project workspace healthy and continuous: validation, checkpoints, memory and cache hygiene, Figma snapshots and reconciliation, safe recovery.",
+  "responsibilities": [
+    "Validate and repair workspace state via the deterministic service",
+    "Coordinate checkpoints",
+    "Snapshot and reconcile Figma state",
+    "Provide relevant context to other agents",
+    "Detect inconsistencies and support safe recovery"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "checkpoint-management",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "figma-context-reading"
+    ],
+    "specialized": [
+      "workspace-management",
+      "project-continuity",
+      "memory-management",
+      "cache-management",
+      "project-state-validation"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "figma.read"
+  ],
+  "hostTools": [
+    "Read",
+    "Glob"
+  ],
+  "taskTypes": [
+    "figma-snapshot",
+    "figma-reconcile",
+    "checkpoint"
+  ],
+  "inputs": [
+    {
+      "name": "workspace",
+      "description": ".ui-ux-magec/"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "snapshot / reconcile report",
+      "description": "figma/snapshot.json, figma/reconcile.json"
+    }
+  ],
+  "model": {
+    "tier": "fast"
+  }
+}

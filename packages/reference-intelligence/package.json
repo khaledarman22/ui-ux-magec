@@ -1,0 +1,19 @@
+{
+  "name": "@ui-ux-magec/reference-intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reference store, canonicalization, dedup, ranking with diversity.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/workspace": "0.1.0"
+  }
+}

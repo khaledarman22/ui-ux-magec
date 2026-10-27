@@ -1,0 +1,24 @@
+{
+  "name": "@ui-ux-magec/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ui-ux-magec command line interface.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/logger": "0.1.0",
+    "@ui-ux-magec/workspace": "0.1.0",
+    "@ui-ux-magec/runtime": "0.1.0",
+    "@ui-ux-magec/integrations": "0.1.0",
+    "@ui-ux-magec/task-manager": "0.1.0",
+    "@ui-ux-magec/figma-bridge": "0.1.0"
+  }
+}

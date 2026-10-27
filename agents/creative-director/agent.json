@@ -1,0 +1,67 @@
+{
+  "id": "creative-director",
+  "name": "Creative Director",
+  "kind": "specialist",
+  "description": "Synthesizes research and brand into multiple original, implementable creative concepts and recommends one based on project goals.",
+  "responsibilities": [
+    "Identify differentiation opportunities",
+    "Generate substantially different concepts",
+    "Reject unsuitable references and incompatible style mixes",
+    "Define mood, typography, composition, imagery and motion direction",
+    "Evaluate originality and usability",
+    "Brief the Figma Designer clearly"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards",
+      "task-communication",
+      "user-feedback-processing"
+    ],
+    "specialized": [
+      "creative-direction",
+      "concept-generation",
+      "visual-storytelling",
+      "reference-synthesis",
+      "brand-expression",
+      "originality-review"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "approvals.request",
+    "references.write"
+  ],
+  "hostTools": [
+    "Read"
+  ],
+  "taskTypes": [
+    "concept-generation"
+  ],
+  "inputs": [
+    {
+      "name": "analyses",
+      "description": "research/visual-analysis-*.json, planning/brand-analysis.json",
+      "schema": "VisualAnalysisReport"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "concepts",
+      "description": "concepts/concepts-<scope>-*.json",
+      "schema": "ConceptSet"
+    }
+  ],
+  "model": {
+    "tier": "deep"
+  }
+}

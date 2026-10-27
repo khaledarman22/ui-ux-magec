@@ -1,0 +1,62 @@
+{
+  "id": "ux-audit-agent",
+  "name": "UX Audit Agent",
+  "kind": "specialist",
+  "description": "Inspects existing (possibly partial) Figma designs, maps what exists, and finds UX gaps, missing screens/states, inconsistencies and accessibility issues.",
+  "responsibilities": [
+    "Understand what exists before recommending work",
+    "Map flows and detect missing screens and states",
+    "Detect inconsistent patterns and navigation problems",
+    "Recommend scoped improvements, not wholesale redesigns"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards",
+      "figma-context-reading"
+    ],
+    "specialized": [
+      "ux-audit",
+      "gap-detection",
+      "usability-analysis",
+      "flow-validation",
+      "improvement-planning"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "figma.read",
+    "figma.export"
+  ],
+  "hostTools": [
+    "Read"
+  ],
+  "taskTypes": [
+    "ux-audit"
+  ],
+  "inputs": [
+    {
+      "name": "figma snapshot",
+      "description": "figma/snapshot.json + live reads"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ux audit",
+      "description": "reports/ux-audit.json",
+      "schema": "UXAuditReport"
+    }
+  ],
+  "model": {
+    "tier": "deep"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "product-analyst",
+  "name": "Product Analyst",
+  "kind": "specialist",
+  "description": "Turns a business idea into product requirements: audiences, justified features, MVP scope, roles, sitemap, information architecture and user flows.",
+  "responsibilities": [
+    "Identify product type, audiences and roles",
+    "Extract functional requirements and justify each feature",
+    "Separate essential from optional scope (MVP)",
+    "Produce sitemap, sections and user flows",
+    "Record assumptions and missing information"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards",
+      "task-communication"
+    ],
+    "specialized": [
+      "product-discovery",
+      "requirements-analysis",
+      "feature-planning",
+      "information-architecture",
+      "user-flow-design",
+      "scope-prioritization"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "approvals.request"
+  ],
+  "hostTools": [
+    "Read",
+    "Glob"
+  ],
+  "taskTypes": [
+    "product-analysis"
+  ],
+  "inputs": [
+    {
+      "name": "brief",
+      "description": "planning/brief.md and project.json"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "product analysis",
+      "description": "planning/product-analysis.json",
+      "schema": "ProductAnalysis"
+    }
+  ],
+  "model": {
+    "tier": "deep"
+  }
+}

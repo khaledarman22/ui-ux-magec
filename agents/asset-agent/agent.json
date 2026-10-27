@@ -1,0 +1,67 @@
+{
+  "id": "asset-agent",
+  "name": "Asset Agent",
+  "kind": "specialist",
+  "description": "Provides the images and icons each page needs: generates images when the host has an image-generation tool, otherwise sources free-license stock photos, fetches open-source icons, and records provenance in assets/.",
+  "responsibilities": [
+    "Derive the image and icon slots a page needs from the concept, sitemap and content",
+    "Decide per image: generate (only if an image-generation tool is available) or source free-license stock",
+    "Fetch a consistent open-source icon set as editable SVG",
+    "Save every file in assets/ with author, license, source or prompt",
+    "Never use inspiration references (Behance, Dribbble...) as design assets"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "source-validation",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "task-communication",
+      "tool-selection"
+    ],
+    "specialized": [
+      "asset-planning",
+      "image-generation",
+      "stock-image-sourcing",
+      "icon-sourcing"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "research.network",
+    "assets.write"
+  ],
+  "hostTools": [
+    "Read",
+    "WebSearch",
+    "WebFetch"
+  ],
+  "taskTypes": [
+    "asset-sourcing"
+  ],
+  "inputs": [
+    {
+      "name": "concept + sitemap",
+      "description": "concepts/*.json (imagery direction), planning/product-analysis.json, design-system/design-system.json"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "asset report",
+      "description": "reports/assets-<page>.json",
+      "schema": "AssetSourcingReport"
+    },
+    {
+      "name": "asset library",
+      "description": "assets/images, assets/icons, assets/assets.json"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

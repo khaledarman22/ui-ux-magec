@@ -1,0 +1,29 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true,
+    "rootDir": "..",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@ui-ux-magec/runtime": [
+        "../apps/runtime/src/index.ts"
+      ],
+      "@ui-ux-magec/cli": [
+        "../apps/cli/src/index.ts"
+      ],
+      "@ui-ux-magec/integrations": [
+        "../integrations/src/index.ts"
+      ],
+      "@ui-ux-magec/*": [
+        "../packages/*/src/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "../node_modules/@figma/plugin-typings/index.d.ts"
+  ]
+}

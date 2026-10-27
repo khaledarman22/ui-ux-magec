@@ -1,0 +1,61 @@
+{
+  "id": "brand-identity-agent",
+  "name": "Brand Identity Agent",
+  "kind": "specialist",
+  "description": "Analyzes logos and brand assets, preserves established identity, and defines (or proposes) digital brand rules: colors, typography, personality.",
+  "responsibilities": [
+    "Inspect supplied logos and assets",
+    "Extract brand colors and typography",
+    "Infer brand personality",
+    "Propose complementary palette and Arabic-capable fonts",
+    "Record proposals as proposed decisions"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards"
+    ],
+    "specialized": [
+      "logo-analysis",
+      "brand-analysis",
+      "palette-generation",
+      "typography-selection",
+      "brand-guidelines"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write"
+  ],
+  "hostTools": [
+    "Read",
+    "Glob"
+  ],
+  "taskTypes": [
+    "brand-analysis"
+  ],
+  "inputs": [
+    {
+      "name": "assets",
+      "description": "assets/logos, assets/images"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "brand analysis",
+      "description": "planning/brand-analysis.json",
+      "schema": "BrandAnalysis"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

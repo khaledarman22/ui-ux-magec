@@ -1,0 +1,31 @@
+{
+  "name": "@ui-ux-magec/runtime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Runtime composition root, tool catalog and MCP server.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/logger": "0.1.0",
+    "@ui-ux-magec/workspace": "0.1.0",
+    "@ui-ux-magec/cache": "0.1.0",
+    "@ui-ux-magec/memory": "0.1.0",
+    "@ui-ux-magec/task-manager": "0.1.0",
+    "@ui-ux-magec/skill-registry": "0.1.0",
+    "@ui-ux-magec/agent-core": "0.1.0",
+    "@ui-ux-magec/research": "0.1.0",
+    "@ui-ux-magec/reference-intelligence": "0.1.0",
+    "@ui-ux-magec/design-engine": "0.1.0",
+    "@ui-ux-magec/figma-bridge": "0.1.0",
+    "@ui-ux-magec/quality-assurance": "0.1.0",
+    "@ui-ux-magec/orchestration": "0.1.0"
+  }
+}

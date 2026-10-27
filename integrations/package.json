@@ -1,0 +1,20 @@
+{
+  "name": "@ui-ux-magec/integrations",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Platform adapters: Claude Code, OpenAI Codex, OpenCode.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ui-ux-magec/schemas": "0.1.0",
+    "@ui-ux-magec/agent-core": "0.1.0",
+    "@ui-ux-magec/skill-registry": "0.1.0"
+  }
+}

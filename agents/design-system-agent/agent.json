@@ -1,0 +1,63 @@
+{
+  "id": "design-system-agent",
+  "name": "Design System Agent",
+  "kind": "specialist",
+  "description": "Defines tokens, type and spacing scales, grids, breakpoints, components with states and variants, and responsive, accessibility and RTL rules.",
+  "responsibilities": [
+    "Define design tokens from brand and concept",
+    "Define components, variants and states",
+    "Define responsive and RTL behaviour",
+    "Define accessibility rules",
+    "Keep the system consistent; prepare (not perform) Figma changes"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "project-memory",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards",
+      "figma-context-reading"
+    ],
+    "specialized": [
+      "design-token-generation",
+      "component-architecture",
+      "design-system-planning",
+      "responsive-patterns",
+      "accessibility-guidelines"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "workspace.write",
+    "memory.write",
+    "figma.read"
+  ],
+  "hostTools": [
+    "Read"
+  ],
+  "taskTypes": [
+    "design-system"
+  ],
+  "inputs": [
+    {
+      "name": "concept",
+      "description": "accepted concept + brand analysis",
+      "schema": "ConceptSet"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "design system",
+      "description": "design-system/design-system.json",
+      "schema": "DesignSystemSpec"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

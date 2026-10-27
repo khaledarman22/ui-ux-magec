@@ -1,0 +1,60 @@
+{
+  "id": "design-qa-agent",
+  "name": "Design QA Agent",
+  "kind": "specialist",
+  "description": "Reviews generated Figma designs using structural checks on live node data and visual review of exported previews; reports issues and requests fixes.",
+  "responsibilities": [
+    "Run structural QA on live Figma data",
+    "Visually review exported previews",
+    "Check against requirements and the selected concept",
+    "Report issues with evidence; never pass untested checks"
+  ],
+  "skills": {
+    "shared": [
+      "context-management",
+      "workspace-access",
+      "structured-output",
+      "error-handling",
+      "progress-reporting",
+      "quality-standards",
+      "figma-context-reading"
+    ],
+    "specialized": [
+      "visual-qa",
+      "responsive-qa",
+      "component-consistency",
+      "accessibility-review",
+      "design-validation"
+    ]
+  },
+  "permissions": [
+    "workspace.read",
+    "tasks.read",
+    "tasks.self",
+    "figma.read",
+    "figma.export",
+    "qa.write"
+  ],
+  "hostTools": [
+    "Read"
+  ],
+  "taskTypes": [
+    "design-qa"
+  ],
+  "inputs": [
+    {
+      "name": "designed screens",
+      "description": "figma/mappings.json + live Figma nodes"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "QA report",
+      "description": "reports/qa-<page>-*.json",
+      "schema": "QAReport"
+    }
+  ],
+  "model": {
+    "tier": "balanced"
+  }
+}

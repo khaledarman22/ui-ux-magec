@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../schemas"
+    },
+    {
+      "path": "../workspace"
+    },
+    {
+      "path": "../memory"
+    },
+    {
+      "path": "../task-manager"
+    },
+    {
+      "path": "../agent-core"
+    },
+    {
+      "path": "../logger"
+    }
+  ]
+}
